@@ -1,15 +1,21 @@
 <?php
-include "../include/header.php";
+// include "../include/header.php";
 
-if (isset($_SESSION['username'])) {
+// if (isset($_SESSION['username'])) {
 
-    session_unset($_SESSION['username']);
+//     session_unset($_SESSION['username']);
 
-    $_SESSION['message'] = "<div class='chip green white-text'>You have been successfully Logged Out.</div>";
+//     $_SESSION['message'] = "<div class='chip green white-text'>You have been successfully Logged Out.</div>";
 
-    header("Location: ../index.php");
-} else {
-    $_SESSION['message'] = "<div class='text-danger'>Login To Continue</div>";
-    header("Location: ../index.php");
-}
+//     header("Location: ../index.php");
+// } else {
+//     $_SESSION['message'] = "<div class='text-danger'>Login To Continue</div>";
+//     header("Location: ../index.php");
+// }
+session_start();
+
+session_unset();
+session_destroy();
+header("Location: ../index.php");
+exit;
 ?>
