@@ -49,7 +49,7 @@ if (isset($_SESSION['username'])) {
         // Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet nobis delectus 
     } else {
         $_SESSION['message'] = "<div class='text-danger'>Login To Continue</div>";
-        header("Location: login.php");
+        header("Location: index.php");
     }
 
 } else {
